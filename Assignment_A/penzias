@@ -1,0 +1,35 @@
+# Copyright: Copyright (C) 2015 Baruch College - All Rights Reserved
+# Description: penzias run scrub unix scripts
+# Author: Weiyi Chen, weiyi.chen@baruchmail.cuny.edu
+
+SCRATCHDIR=/home/weiyi.chen/BDiF2015-Weiyi-Chen/Scratch
+WORKINGDIR=/home/weiyi.chen/BDiF2015-Weiyi-Chen/Assignment_A
+DATAFILE=data.txt
+SIGNALFILE=signal.txt
+NOISEFILE=noise.txt
+MPINUM=6
+
+# make scratch directory
+
+mkdir $SCRATCHDIR
+
+# copy data from work directory to scratch directory
+
+cp $WORKINGDIR/$DATAFILE $SCRATCHDIR
+
+# change directory to working directory
+
+cd $WORKINGDIR
+
+# run C++ with MPI
+
+time mpiexec -np $MPINUM ./scrub.x $SCRATCHDIR
+
+# copy result from scratch directory to work directory
+
+mv $SCRATCHDIR/$SIGNALFILE $WORKINGDIR
+mv $SCRATCHDIR/$NOISEFILE $WORKINGDIR
+
+# remove scratch directory
+
+rm -rf $SCRATCHDIR

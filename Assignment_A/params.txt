@@ -1,0 +1,12 @@
+# Copyright: Copyright (C) 2015 Baruch College - All Rights Reserved
+# Description: Sample command line params file
+# Author: Weiyi Chen, weiyi.chen@baruchmail.cuny.edu
+
+# filenames
+-log,log.txt
+-data,data.txt
+-signal,signal.txt
+-noise,noise.txt
+
+# tolerance to accept datatick as a signal
+-tolerance,8.0

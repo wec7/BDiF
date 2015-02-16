@@ -1,0 +1,15 @@
+# Copyright: Copyright (C) 2015 Baruch College - All Rights Reserved
+# Description: penzias run scrub unix scripts
+# Author: Weiyi Chen, weiyi.chen@baruchmail.cuny.edu
+
+# working directory of my local computer
+
+WORKINGDIR=/Users/weiyi/Desktop/BDiF2015-Weiyi-Chen/Assignment_A
+
+# change director to working directory
+
+cd $WORKINGDIR
+
+# Run C++11 with 6 MPIs
+
+time mpiexec -np 6 ./scrub.x .
