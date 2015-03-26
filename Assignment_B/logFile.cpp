@@ -1,11 +1,11 @@
 /*
 Copyright: Copyright (C) 2015 Baruch College - All Rights Reserved
-Description: ScrubLogFile Class, for write log
+Description: LogFile Class, for write log
 Author: Weiyi Chen, weiyi.chen@baruchmail.cuny.edu
 */
 
-#include "scrubLogFile.h"
-#include "scrubOutput.h"
+#include "logFile.h"
+#include "output.h"
 
 // LogLevel enumerator
 
@@ -46,28 +46,28 @@ std::string now() {
     return buffer;
 }
 
-// ScrubLogFile Class 
+// LogFile Class 
 
-int ScrubLogFile::count = 0;
+int LogFile::count = 0;
 
-ScrubLogFile::ScrubLogFile() {
+LogFile::LogFile() {
 	/* counter add 1 when a new instance of this object creates */
     count += 1;
 }
 
-ScrubLogFile::~ScrubLogFile() {
-	/* destructor to let ScrubOutput receieve the results  */
+LogFile::~LogFile() {
+	/* destructor to let Output receieve the results  */
     os << std::endl;
-    ScrubOutput::output(os.str());
+    Output::output(os.str());
 }
 
-LogLevel& ScrubLogFile::ReportLevel() {
+LogLevel& LogFile::ReportLevel() {
 	/* return the level infomation */
     static LogLevel level = INFO;
     return level; 
 }
 
-std::ostringstream & ScrubLogFile::Get(LogLevel level) {
+std::ostringstream & LogFile::Get(LogLevel level) {
 	/* 
 	@summary: pass content to ostream
 	@param level: corresonded level output

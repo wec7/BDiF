@@ -20,6 +20,8 @@ Author: Weiyi Chen, weiyi.chen@baruchmail.cuny.edu
 
 #include <cstring> 
 
+// functions (or structure) of scrub.cpp
+
 void read_params(ScrubParams& params, bool& b_paramsFileOpen);
 void write_log(int mpi_rank, int mpi_size, bool b_paramsFileOpen, ScrubParams params, int argc, char **argv);
 void open_files(MPI_File &in_data, MPI_File &out_signal, MPI_File &out_noise, std::string s_pwd, ScrubParams params, double mpi_rank);

@@ -1,0 +1,8 @@
+# Copyright: Copyright (C) 2015 Baruch College - All Rights Reserved
+# Description: local run scrub unix scripts
+# Author: Weiyi Chen, weiyi.chen@baruchmail.cuny.edu
+# Reference: http://wiki.csi.cuny.edu/cunyhpc/index.php/Submitting_Jobs
+
+export LD_LIBRARY_PATH=:/usr/local/cuda/lib
+cd /Users/weiyi/Desktop/BDiF2015-Weiyi-Chen/Assignment_B
+time OMP_NUM_THREADS=8 ./CVA_cpu.x params.txt

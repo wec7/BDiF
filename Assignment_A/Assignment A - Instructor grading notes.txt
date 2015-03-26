@@ -1,0 +1,9 @@
+Assignment A - Instructor grading notes
+=======================================
+
+04 MAR 2015
+-----------
+
+Begin grading for Assignment A.
+
+Pull code from Github and quick skim of code to review how likely the student has met the requirements.

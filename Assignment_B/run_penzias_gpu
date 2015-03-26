@@ -1,0 +1,14 @@
+# Copyright: Copyright (C) 2015 Baruch College - All Rights Reserved
+# Description: penzias run scrub unix scripts
+# Author: Weiyi Chen, weiyi.chen@baruchmail.cuny.edu
+# Reference: http://wiki.csi.cuny.edu/cunyhpc/index.php/Submitting_Jobs
+
+#!/bin/bash
+#PBS -N hello_gpu
+#PBS -q production
+#PBS -l select=1:ncpus=8:ngpus=2:accel=fermi
+#PBS -l place=free
+#PBS -V
+
+cd /Users/weiyi/Desktop/BDiF2015-Weiyi-Chen/Assignment_B
+time ./CVA_gpu.x params.txt

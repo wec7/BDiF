@@ -1,0 +1,7 @@
+# Copyright: Copyright (C) 2015 Baruch College - All Rights Reserved
+# Description: penzias run scrub unix scripts
+# Author: Weiyi Chen, weiyi.chen@baruchmail.cuny.edu
+# Reference: http://wiki.csi.cuny.edu/cunyhpc/index.php/Submitting_Jobs
+
+cd /home/weiyi.chen/BDiF2015-Weiyi-Chen/Assignment_B
+time OMP_NUM_THREADS=2 ./CVA_cpu.x params.txt

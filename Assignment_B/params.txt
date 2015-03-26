@@ -1,0 +1,43 @@
+# Copyright: Copyright (C) 2015 Baruch College - All Rights Reserved
+# Description: Params sample file
+# Author: Weiyi Chen, weiyi.chen@baruchmail.cuny.edu
+
+# log paramters
+log_file,log.txt
+log_level,INFO
+
+# counterparty paramters
+num_counterparties,50000
+ratings,1.0,1.0,1.0,1.0,1.0
+hazard,0.02,0.04,0.06,0.08,0.10
+allocate,1.0,2.0,4.0,8.0,16.0
+
+# deals paramters
+num_fx,250000000
+fx_long_percent,0.6
+fx_nominal,800000.0,1200000.0
+
+num_swap,250000000
+swap_long_percent,0.45
+swap_nominal,800000.0,1200000.0
+fixed_rate,0.02,0.08
+
+tenor,2,50
+
+# monte carlo paramters
+num_paths,8
+disc_rate,0.06
+
+fx_init,1.3525
+fx_drift,0.0
+FX_SIGMA,0.2
+
+usd_beta0,0.60,0.60,0.20,0.10
+usd_beta1,0.58,0.58,0.25,0.15
+usd_beta2,1.58,1.58,0.10,0.20
+usd_beta3,1.40,1.40,0.10,0.05
+
+eur_beta0,0.45,0.45,0.15,0.08
+eur_beta1,0.50,0.50,0.20,0.12
+eur_beta2,1.60,1.60,0.15,0.15
+eur_beta3,1.25,1.25,0.15,0.08

@@ -2,7 +2,14 @@
 # Description: penzias run scrub unix scripts
 # Author: Weiyi Chen, weiyi.chen@baruchmail.cuny.edu
 
-SCRATCHDIR=/home/weiyi.chen/BDiF2015-Weiyi-Chen/Scratch
+#!/bin/bash
+#PBS -q production_gpu
+#PBS -N trn11_cva_gpu
+#PBS -l select=1:ncpus=1:ngpus=1:accel=fermi
+#PBS -l place=free
+#PBS -V
+
+SCRATCHDIR=/home/weiyi.chen/BDiF2015-Weiyi-Chen/Assignment_A/Scratch
 WORKINGDIR=/home/weiyi.chen/BDiF2015-Weiyi-Chen/Assignment_A
 DATAFILE=data.txt
 SIGNALFILE=signal.txt
@@ -23,7 +30,7 @@ cd $WORKINGDIR
 
 # run C++ with MPI
 
-time mpiexec -np $MPINUM ./scrub.x $SCRATCHDIR
+time mpiexec -np $MPINUM ./main.x $SCRATCHDIR
 
 # copy result from scratch directory to work directory
 

@@ -56,7 +56,7 @@ template<typename T> void DataTick::parse_helper(int offset, int len, T& value) 
     @param value: type could be int or float, the return value
     */
     char* c_offset = &c_line[offset];
-    char delimeter = c_line[8]; 
+    char delimeter = c_line[offset+len]; 
     c_line[offset+len] = '\0';
     if (typeid(value) == typeid(int))
         value = atoi(c_offset);
